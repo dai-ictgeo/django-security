@@ -27,7 +27,7 @@ class PasswordExpiry(models.Model):
     user = models.ForeignKey(USER_MODEL, unique=True, on_delete=models.CASCADE)
 
     password_expiry_date = models.DateTimeField(
-        auto_now_add=True,
+        auto_now_add=False,
         null=True,
         help_text="The date and time when the user's password expires. If "
                   "this is empty, the password never expires.",
