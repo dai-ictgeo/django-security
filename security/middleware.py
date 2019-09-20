@@ -308,7 +308,7 @@ class MandatoryPasswordChangeMiddleware(BaseMiddleware):
         if not self.settings:
             return
 
-        if not request.user.is_authenticated():
+        if not request.user.is_authenticated:
             return
 
         if view == django.views.static.serve:
