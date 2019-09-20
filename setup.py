@@ -3,6 +3,7 @@
 import os
 import sys
 import subprocess
+import setuptools
 from distutils.core import setup, Command
 
 with open(os.path.join(os.path.dirname(__file__), 'README.md')) as f:
@@ -22,15 +23,16 @@ class Test(Command):
         errno = subprocess.call([sys.executable, 'testing/manage.py', 'test'])
         raise SystemExit(errno)
 
-setup(name="django-security",
-      description='A collection of tools to help secure a Django project.',
+setuptools.setup(name="django-security_2.0",
+      description='A collection of tools to help secure a Django project. update 2.1.4. mod for pwdExpiry',
       long_description=readme,
-      maintainer="SD Elements",
-      maintainer_email="django-security@sdelements.com",
-      version="0.9.9",
+      long_description_content_type="text/markdown",
+      maintainer="T",
+      maintainer_email="",
+      version="1.0.1",
       packages=["security", "security.south_migrations",
                 "security.migrations", "security.auth_throttling"],
-      url='https://github.com/sdelements/django-security',
+      url='https://github.com/dai-ictgeo/django-security',
       classifiers=[
           'Framework :: Django',
           'Framework :: Django :: 1.8',
